@@ -1,9 +1,28 @@
 # CrossOverConfigs
 Optimal CrossOver configurations for Apple Silicon (with installation)
 
-## Generic installer issues
-
 "My installer won't launch in Crossover."
+
+## Advanced Install (Headless)
+
+1. Install an unlisted application
+2. Select installer executable
+3. `...` button → Advanced Options
+4. `+` button, add the following programs to install:
+
+```
+CrossOver HTML engine
+Wine Mono
+Microsoft Visual C++ 6.0 (4.2 & 6.0) Redistributable
+Microsoft Rich Edit 4.1 (Msftedit.dll)
+msls31
+Microsoft Rich Edit 2.0
+```
+
+And potentially: `DirectX for Modern Games`
+
+
+## Easier Install (Steam Client Overhead)
 
 1. CrossOver.app > Install
 2. Select "Steam"
