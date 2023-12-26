@@ -53,3 +53,38 @@ You'll need a virtual machine running Windows 10 for this next step. VMWare is f
   - Most virtual machines support dragging and dropping from Windows file manager into Finder
 6. Run the exe game file from the newly moved folder (ie. `Program Files (x86)/My-Game/Game.exe`)
 
+
+
+## Package Prerequisites
+<i>You may only need the x64 packages with CrossOver.</i>
+
+```
+Dragon Age: Inquisition
+C++ Redist 2008 SP1 x86
+C++ Redist 2008 SP1 x64
+C++ Redist 2010 SP1 x86
+C++ Redist 2010 SP1 x64
+C++ Redist 2012 x86
+C++ Redist 2012 x64
+C++ Redist 2013 x86
+C++ Redist 2013 x64
+
+Dishonered: Complete
+C++ Redist 2012 x86
+C++ Redist 2012 x64
+
+Sekiro: Shadows Die Twice
+C++ Redist 2015 x86
+C++ Redist 2015 x64
+
+Batman: Arkham Knight
+C++ Redist 2010 SP1 ×86
+C++ Redist 2010 SP1 ×64
+C++ Redist 2012 x86
+C++ Redist 2012 ×64
+Microsoft NET Framework 4.5.1
+
+Aliens: Dark Descent
+C++ Redist 2015-2019 x86
+C++ Redist 2015-2019 x64
+```
