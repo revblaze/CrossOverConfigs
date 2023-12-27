@@ -1,63 +1,43 @@
 # CrossOverConfigs
-Optimal CrossOver configurations for Apple Silicon (with installation)
+Optimal game installations and configurations for CrossOver (no Steam).
 
-"My installer won't launch in Crossover."
+<i>"My installer won't launch in Crossover"</i> or <i>"I already have the installed game files, I just want to run them through CrossOver."</i>
 
-## Advanced Install (Headless)
+## Manual Install of New Game (Headless)
 
-1. Install an unlisted application
-2. Select installer executable
-3. `...` button → Advanced Options
-4. `+` button, add the following programs to install:
+1. Open CrossOver.app, `Bottle > New Bottle...`
+2. New Bottle Name: `[Name of Game]`
+3. Select Windows version (`Windows 10 64bit` if unsure)
+4. Click **Create**
+5. Select new bottle from left-hand panel, click "Install Application into Bottle" from right-hand panel
+6. In the search bar, type `C++ 6.0` and select the package with title `Microsoft Visual C++ 6.0 (4.2 & 6.0) Redistributable`
+7. Click the top-right button of the cirlce with 3 dots, select `Advanced Options...`
+8. See each page for notes on package dependencies and which to install (if unsure, select `Visual C++ 2015-2022 (64-bit)`
+9. Click `Done`, then `Install` and walkthrough the installation windows
+10. Follow the instructions for Installation Type A or Type B below...
 
-```
-CrossOver HTML engine
-Wine Mono
-Microsoft Visual C++ 6.0 (4.2 & 6.0) Redistributable
-Microsoft Rich Edit 4.1 (Msftedit.dll)
-msls31
-Microsoft Rich Edit 2.0
-```
+### A) Installation Setup
+<i>Follow this step for running game installers. If you already have the full game files (ie. pre-installed via Parallels/VMware), go to `Step B)`.</i>
+1. Return to new bottle from left-hand panel, click "Install Application into Bottle" from right-hand panel
+2. Select the top-right button "Install an unlisted application"
+3. Click the "Install" button and locate your game installer exe file
+4. Follow through with the installation process
+5. Double-click the icon of your new game icon to start playing
 
-And potentially: `DirectX for Modern Games`
+<i>If the game installer will not launch with CrossOver, you will likely need to install these game files through a virtual machine (Windows running on Parallels/VMware). Then copy the files from that installation to your Mac and perform `Step B)`.</i>
 
-
-## Easier Install (Steam Client Overhead)
-
-1. CrossOver.app > Install
-2. Select "Steam"
-3. In the `CrossOver will install 'Steam' into a new Windows 10 64-bit bottle named 'Steam'` row, click "Edit"
-4. In the "New Bottle Name" field, type the name of the game you're attempting to install
-5. Follow the on-screen instructions to install Steam; deselect "Open Steam" at the end (or just close it after)
-6. Open the newly created Bottle from the CrossOver.app left sidebar menu
-
-<i>\* Steam comes pre-packaged with a number of frameworks and libraries that most installers will assume you already have. This is why we setup a new bottle with Steam.</i>
-
-### Workaround 1: CrossOver + Steam Fix
-Try this workaround first.
-
-1. Click "Install Application into Bottle"
-2. Select the installer exe that wasn't launching.
-
-If your game still won't launch, continue on. Do not remove the new bottle with Steam, as we'll still need it.
-
-### Workaround 2: Virtual Machine
-You'll need a virtual machine running Windows 10 for this next step. VMWare is free for non-commercial users. You can delete the virtual machine after your installation is complete.
-
-1. Run the installer from a virtual machine, preferably running Windows 10
-2. Note down where the game is installed to (ie. `C:\Games\My-Game`)
-3. Go to your newly created CrossOver bottle (left sidebar) and select "Open C: Drive"
-4. This should open Finder; from here, open the folder `Program Files (x86)`
-5. Move the game from your virtual machine running Windows to the `Program Files (x86)` folder
-  - ie. `C:\Ganes\My-Game` → `Program Files (x86)/My-Game`
-  - Most virtual machines support dragging and dropping from Windows file manager into Finder
-6. Run the exe game file from the newly moved folder (ie. `Program Files (x86)/My-Game/Game.exe`)
-
+### B) Pre-Installed Setup
+<i>Follow this step if you already have the full game files pre-installed and ready to go (ie. Parallels/VMware).</i>
+1. Return to new bottle from left-hand panel, click "Open C:Drive" from right-hand panel
+2. Copy the pre-installed game folder/directory into this folder/directory
+3. Return to CrossOver.app and select "Run Command"
+4. Click `Browse...` and select the game-launching exe file from the copied folder/directory
+5. Click `Save Command as a Launcher` and wait (do not close this window)
+6. Once an icon of your game shows up in the CrossOver window (behind this window), you may close this window
+7. Double-click the icon of your new game icon to start playing
 
 
 ## Package Prerequisites
-<i>You may only need the x64 packages with CrossOver.</i>
-
 ```
 Dragon Age: Inquisition
 C++ Redist 2008 SP1 x86
